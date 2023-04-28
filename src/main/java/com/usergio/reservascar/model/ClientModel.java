@@ -25,7 +25,12 @@ public class ClientModel {
     @Column(length = 3)
     private byte age;
 
-    //@OneToMany(cascade = CascadeType.MERGE)
-    //@JoinColumn(name="id_client", nullable = false)
+    @OneToMany(cascade = CascadeType.MERGE)
+    @JoinColumn(name = "id_client", nullable = false)
+    private List<MessageModel> messages;
+
+    @OneToMany(cascade = CascadeType.MERGE)
+    @JoinColumn(name = "id_client", nullable = false)
+    private List<ReservationModel> reservations;
 
 }
