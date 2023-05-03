@@ -8,23 +8,26 @@ import javax.persistence.*;
 import java.util.List;
 
 @Entity
-@Table(name="Car")
+@Table(name = "Car")
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class CarModel {
+
+public class CarModel{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id_car")
     private int id;
     @Column(length = 45)
     private String name;
     @Column(length = 45)
     private String brand;
+    @Column(length = 5, name = "modelo")
     private int year;
     @Column(length = 250)
     private String description;
 
-    @ManyToOne(cascade = CascadeType.MERGE)
+    @ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "id_gama", nullable = false)
     private GamaModel gama;
 
@@ -35,5 +38,4 @@ public class CarModel {
     @OneToMany(cascade = CascadeType.MERGE)
     @JoinColumn(name = "id_car", nullable = false)
     private List<ReservationModel> reservations;
-
 }

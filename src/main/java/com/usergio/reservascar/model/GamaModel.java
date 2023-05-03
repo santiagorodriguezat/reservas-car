@@ -14,6 +14,7 @@ import javax.persistence.*;
 public class GamaModel {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "idGama")
     private int id;
     @Column(length = 45)
     private String name;

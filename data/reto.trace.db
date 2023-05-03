@@ -30,3 +30,441 @@ alter table messages add constraint FKe63efbqsj7ir93v2n4cr9h6ku foreign key (id_
 org.h2.jdbc.JdbcSQLSyntaxErrorException: Tabla "CAR" no encontrada
 Table "CAR" not found; SQL statement:
 alter table reservation add constraint FKevbx68glv1rnq9th5petwly67 foreign key (id_car) references car [42102-214]
+2023-04-28 16:20:02 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "[*]TEST"; se esperaba "TRUNCATE"
+Syntax error in SQL statement "[*]TEST"; expected "TRUNCATE"; SQL statement:
+TEST [42001-214]
+2023-04-28 16:20:04 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "[*]TEST SCORE"; se esperaba "TRUNCATE"
+Syntax error in SQL statement "[*]TEST SCORE"; expected "TRUNCATE"; SQL statement:
+TEST SCORE [42001-214]
+2023-04-28 16:20:06 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "[*]TEST SCORE RESERVATION"; se esperaba "TRUNCATE"
+Syntax error in SQL statement "[*]TEST SCORE RESERVATION"; expected "TRUNCATE"; SQL statement:
+TEST SCORE RESERVATION [42001-214]
+2023-04-28 16:20:18 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Imposible eliminar "CLIENT" debido a que "FK72CR1PU7CILKW23IJPRQ9M2GW, FK8J8OU6FSJHC6BNHNXSYAS7IR9" depende de él.
+Cannot drop "CLIENT" because "FK72CR1PU7CILKW23IJPRQ9M2GW, FK8J8OU6FSJHC6BNHNXSYAS7IR9" depends on it; SQL statement:
+DROP TABLE CLIENT [90107-214]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:632)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.command.ddl.DropTable.prepareDrop(DropTable.java:97)
+	at org.h2.command.ddl.DropTable.update(DropTable.java:121)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:169)
+	at org.h2.command.Command.executeUpdate(Command.java:252)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:252)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:223)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1339)
+	at org.h2.server.web.WebApp.query(WebApp.java:1137)
+	at org.h2.server.web.WebApp.query(WebApp.java:1113)
+	at org.h2.server.web.WebApp.process(WebApp.java:244)
+	at org.h2.server.web.WebApp.processRequest(WebApp.java:176)
+	at org.h2.server.web.WebServlet.doGet(WebServlet.java:129)
+	at org.h2.server.web.WebServlet.doPost(WebServlet.java:166)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:555)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:209)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:389)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:926)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1791)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+2023-04-28 16:22:06 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "create table car (id integer generated by default as identity, brand varchar(45), description varchar(250), name varchar(45), [*]year integer not null, id_gama integer not null, primary key (id))"; se esperaba "identifier"
+Syntax error in SQL statement "create table car (id integer generated by default as identity, brand varchar(45), description varchar(250), name varchar(45), [*]year integer not null, id_gama integer not null, primary key (id))"; expected "identifier"; SQL statement:
+create table car (id integer generated by default as identity, brand varchar(45), description varchar(250), name varchar(45), year integer not null, id_gama integer not null, primary key (id)) [42001-214]
+2023-04-28 16:22:06 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Tabla "CAR" no encontrada
+Table "CAR" not found; SQL statement:
+alter table car add constraint FK7jf72pj0hihv9rs5fhxnmqvxn foreign key (id_gama) references gamas [42102-214]
+2023-04-28 16:22:06 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Tabla "CAR" no encontrada
+Table "CAR" not found; SQL statement:
+alter table messages add constraint FKe63efbqsj7ir93v2n4cr9h6ku foreign key (id_car) references car [42102-214]
+2023-04-28 16:22:06 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Tabla "CAR" no encontrada
+Table "CAR" not found; SQL statement:
+alter table reservation add constraint FKevbx68glv1rnq9th5petwly67 foreign key (id_car) references car [42102-214]
+2023-04-28 16:37:19 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "create table car (id integer generated by default as identity, brand varchar(45), description varchar(250), name varchar(45), [*]year integer not null, id_gama integer not null, primary key (id))"; se esperaba "identifier"
+Syntax error in SQL statement "create table car (id integer generated by default as identity, brand varchar(45), description varchar(250), name varchar(45), [*]year integer not null, id_gama integer not null, primary key (id))"; expected "identifier"; SQL statement:
+create table car (id integer generated by default as identity, brand varchar(45), description varchar(250), name varchar(45), year integer not null, id_gama integer not null, primary key (id)) [42001-214]
+2023-04-28 16:37:19 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Tabla "CAR" no encontrada
+Table "CAR" not found; SQL statement:
+alter table car add constraint FK7jf72pj0hihv9rs5fhxnmqvxn foreign key (id_gama) references gamas [42102-214]
+2023-04-28 16:37:19 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Tabla "CAR" no encontrada
+Table "CAR" not found; SQL statement:
+alter table messages add constraint FKe63efbqsj7ir93v2n4cr9h6ku foreign key (id_car) references car [42102-214]
+2023-04-28 16:37:19 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Tabla "CAR" no encontrada
+Table "CAR" not found; SQL statement:
+alter table reservation add constraint FKevbx68glv1rnq9th5petwly67 foreign key (id_car) references car [42102-214]
+2023-04-28 16:55:34 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "create table car (id integer generated by default as identity, brand varchar(45), description varchar(250), name varchar(45), [*]year integer not null, id_gama integer not null, primary key (id))"; se esperaba "identifier"
+Syntax error in SQL statement "create table car (id integer generated by default as identity, brand varchar(45), description varchar(250), name varchar(45), [*]year integer not null, id_gama integer not null, primary key (id))"; expected "identifier"; SQL statement:
+create table car (id integer generated by default as identity, brand varchar(45), description varchar(250), name varchar(45), year integer not null, id_gama integer not null, primary key (id)) [42001-214]
+2023-04-28 16:55:34 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Tabla "CAR" no encontrada
+Table "CAR" not found; SQL statement:
+alter table car add constraint FK7jf72pj0hihv9rs5fhxnmqvxn foreign key (id_gama) references gamas [42102-214]
+2023-04-28 16:55:34 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Tabla "CAR" no encontrada
+Table "CAR" not found; SQL statement:
+alter table messages add constraint FKe63efbqsj7ir93v2n4cr9h6ku foreign key (id_car) references car [42102-214]
+2023-04-28 16:55:34 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Tabla "CAR" no encontrada
+Table "CAR" not found; SQL statement:
+alter table reservation add constraint FKevbx68glv1rnq9th5petwly67 foreign key (id_car) references car [42102-214]
+2023-05-03 17:34:27 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "create table car (id integer generated by default as identity, brand varchar(45), description varchar(250), name varchar(45), [*]year integer not null, id_gama integer not null, primary key (id))"; se esperaba "identifier"
+Syntax error in SQL statement "create table car (id integer generated by default as identity, brand varchar(45), description varchar(250), name varchar(45), [*]year integer not null, id_gama integer not null, primary key (id))"; expected "identifier"; SQL statement:
+create table car (id integer generated by default as identity, brand varchar(45), description varchar(250), name varchar(45), year integer not null, id_gama integer not null, primary key (id)) [42001-214]
+2023-05-03 17:34:27 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Tabla "CAR" no encontrada
+Table "CAR" not found; SQL statement:
+alter table car add constraint FK7jf72pj0hihv9rs5fhxnmqvxn foreign key (id_gama) references gamas [42102-214]
+2023-05-03 17:34:27 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Tabla "CAR" no encontrada
+Table "CAR" not found; SQL statement:
+alter table messages add constraint FKe63efbqsj7ir93v2n4cr9h6ku foreign key (id_car) references car [42102-214]
+2023-05-03 17:34:27 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Tabla "CAR" no encontrada
+Table "CAR" not found; SQL statement:
+alter table reservation add constraint FKevbx68glv1rnq9th5petwly67 foreign key (id_car) references car [42102-214]
+2023-05-03 17:46:52 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "create table car (id integer generated by default as identity, brand varchar(45), description varchar(250), name varchar(45), [*]year tinyint, id_gama integer not null, primary key (id))"; se esperaba "identifier"
+Syntax error in SQL statement "create table car (id integer generated by default as identity, brand varchar(45), description varchar(250), name varchar(45), [*]year tinyint, id_gama integer not null, primary key (id))"; expected "identifier"; SQL statement:
+create table car (id integer generated by default as identity, brand varchar(45), description varchar(250), name varchar(45), year tinyint, id_gama integer not null, primary key (id)) [42001-214]
+2023-05-03 17:46:52 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Tabla "CAR" no encontrada
+Table "CAR" not found; SQL statement:
+alter table car add constraint FK7jf72pj0hihv9rs5fhxnmqvxn foreign key (id_gama) references gamas [42102-214]
+2023-05-03 17:48:48 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "create table cars (id integer generated by default as identity, brand varchar(45), description varchar(250), name varchar(45), [*]year tinyint, id_gama integer not null, primary key (id))"; se esperaba "identifier"
+Syntax error in SQL statement "create table cars (id integer generated by default as identity, brand varchar(45), description varchar(250), name varchar(45), [*]year tinyint, id_gama integer not null, primary key (id))"; expected "identifier"; SQL statement:
+create table cars (id integer generated by default as identity, brand varchar(45), description varchar(250), name varchar(45), year tinyint, id_gama integer not null, primary key (id)) [42001-214]
+2023-05-03 17:48:48 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Tabla "CARS" no encontrada
+Table "CARS" not found; SQL statement:
+alter table cars add constraint FKmx7755ldbkffmkcrpv80rfunr foreign key (id_gama) references gamas [42102-214]
+2023-05-03 17:57:41 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "create table cars (id_car integer generated by default as identity, brand varchar(45), description varchar(250), name varchar(45), [*]year tinyint, id_gama integer not null, primary key (id_car))"; se esperaba "identifier"
+Syntax error in SQL statement "create table cars (id_car integer generated by default as identity, brand varchar(45), description varchar(250), name varchar(45), [*]year tinyint, id_gama integer not null, primary key (id_car))"; expected "identifier"; SQL statement:
+create table cars (id_car integer generated by default as identity, brand varchar(45), description varchar(250), name varchar(45), year tinyint, id_gama integer not null, primary key (id_car)) [42001-214]
+2023-05-03 17:57:41 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Tabla "CARS" no encontrada
+Table "CARS" not found; SQL statement:
+alter table cars add constraint FKmx7755ldbkffmkcrpv80rfunr foreign key (id_gama) references gamas [42102-214]
+2023-05-03 17:58:33 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "select carmodel0_.id_car as id_car1_0_, carmodel0_.brand as brand2_0_, carmodel0_.description as descript3_0_, carmodel0_.id_gama as id_gama6_0_, carmodel0_.name as name4_0_, carmodel0_.[*]year as year5_0_ from cars carmodel0_"; se esperaba "identifier"
+Syntax error in SQL statement "select carmodel0_.id_car as id_car1_0_, carmodel0_.brand as brand2_0_, carmodel0_.description as descript3_0_, carmodel0_.id_gama as id_gama6_0_, carmodel0_.name as name4_0_, carmodel0_.[*]year as year5_0_ from cars carmodel0_"; expected "identifier"; SQL statement:
+select carmodel0_.id_car as id_car1_0_, carmodel0_.brand as brand2_0_, carmodel0_.description as descript3_0_, carmodel0_.id_gama as id_gama6_0_, carmodel0_.name as name4_0_, carmodel0_.year as year5_0_ from cars carmodel0_ [42001-214]
+2023-05-03 18:00:06 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "create table cars (id_car integer generated by default as identity, brand varchar(45), description varchar(250), name varchar(45), [*]year tinyint, id_gama integer not null, primary key (id_car))"; se esperaba "identifier"
+Syntax error in SQL statement "create table cars (id_car integer generated by default as identity, brand varchar(45), description varchar(250), name varchar(45), [*]year tinyint, id_gama integer not null, primary key (id_car))"; expected "identifier"; SQL statement:
+create table cars (id_car integer generated by default as identity, brand varchar(45), description varchar(250), name varchar(45), year tinyint, id_gama integer not null, primary key (id_car)) [42001-214]
+2023-05-03 18:00:06 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Tabla "CARS" no encontrada
+Table "CARS" not found; SQL statement:
+alter table cars add constraint FKmx7755ldbkffmkcrpv80rfunr foreign key (id_gama) references gamas [42102-214]
+2023-05-03 18:00:06 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Tabla "CARS" no encontrada
+Table "CARS" not found; SQL statement:
+alter table messages add constraint FKjipclvndpvovqh1gxuaca57g0 foreign key (id_car) references cars [42102-214]
+2023-05-03 18:00:06 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Tabla "CARS" no encontrada
+Table "CARS" not found; SQL statement:
+alter table reservation add constraint FK7llqmft92ewwdejr2gv1nyf5j foreign key (id_car) references cars [42102-214]
+2023-05-03 18:19:24 database: wrong user or password; user: "SA"
+org.h2.message.DbException: Nombre de usuario ó password incorrecto
+Wrong user name or password [28000-214]
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.message.DbException.get(DbException.java:188)
+	at org.h2.engine.Engine.openSession(Engine.java:154)
+	at org.h2.engine.Engine.openSession(Engine.java:222)
+	at org.h2.engine.Engine.createSession(Engine.java:201)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:338)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:122)
+	at org.h2.util.JdbcUtils.getConnection(JdbcUtils.java:288)
+	at org.h2.server.web.WebServer.getConnection(WebServer.java:808)
+	at org.h2.server.web.WebApp.login(WebApp.java:1033)
+	at org.h2.server.web.WebApp.process(WebApp.java:226)
+	at org.h2.server.web.WebApp.processRequest(WebApp.java:176)
+	at org.h2.server.web.WebServlet.doGet(WebServlet.java:129)
+	at org.h2.server.web.WebServlet.doPost(WebServlet.java:166)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:555)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:209)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:389)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:926)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1791)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+Caused by: org.h2.jdbc.JdbcSQLInvalidAuthorizationSpecException: Nombre de usuario ó password incorrecto
+Wrong user name or password [28000-214]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:510)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477)
+	... 50 more
+2023-05-03 18:19:53 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Tabla "DATABASE" no encontrada
+Table "DATABASE" not found; SQL statement:
+delete database reto [42102-214]
+2023-05-03 18:20:23 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Imposible eliminar "CLIENT" debido a que "FK72CR1PU7CILKW23IJPRQ9M2GW, FK8J8OU6FSJHC6BNHNXSYAS7IR9" depende de él.
+Cannot drop "CLIENT" because "FK72CR1PU7CILKW23IJPRQ9M2GW, FK8J8OU6FSJHC6BNHNXSYAS7IR9" depends on it; SQL statement:
+DROP TABLE CLIENT [90107-214]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:632)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.command.ddl.DropTable.prepareDrop(DropTable.java:97)
+	at org.h2.command.ddl.DropTable.update(DropTable.java:121)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:169)
+	at org.h2.command.Command.executeUpdate(Command.java:252)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:252)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:223)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1339)
+	at org.h2.server.web.WebApp.query(WebApp.java:1137)
+	at org.h2.server.web.WebApp.query(WebApp.java:1113)
+	at org.h2.server.web.WebApp.process(WebApp.java:244)
+	at org.h2.server.web.WebApp.processRequest(WebApp.java:176)
+	at org.h2.server.web.WebServlet.doGet(WebServlet.java:129)
+	at org.h2.server.web.WebServlet.doPost(WebServlet.java:166)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:555)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:209)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:389)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:926)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1791)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+2023-05-03 18:20:39 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Tabla "MESSAGES" no encontrada
+Table "MESSAGES" not found; SQL statement:
+DROP TABLE MESSAGES [42102-214]
+2023-05-03 18:21:46 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "create table cars (id_car integer generated by default as identity, brand varchar(45), description varchar(250), name varchar(45), [*]year tinyint, id_gama integer not null, primary key (id_car))"; se esperaba "identifier"
+Syntax error in SQL statement "create table cars (id_car integer generated by default as identity, brand varchar(45), description varchar(250), name varchar(45), [*]year tinyint, id_gama integer not null, primary key (id_car))"; expected "identifier"; SQL statement:
+create table cars (id_car integer generated by default as identity, brand varchar(45), description varchar(250), name varchar(45), year tinyint, id_gama integer not null, primary key (id_car)) [42001-214]
+2023-05-03 18:21:47 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Tabla "CARS" no encontrada
+Table "CARS" not found; SQL statement:
+alter table cars add constraint FKmx7755ldbkffmkcrpv80rfunr foreign key (id_gama) references gamas [42102-214]
+2023-05-03 18:21:47 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Tabla "CARS" no encontrada
+Table "CARS" not found; SQL statement:
+alter table messages add constraint FKjipclvndpvovqh1gxuaca57g0 foreign key (id_car) references cars [42102-214]
+2023-05-03 18:21:47 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Tabla "CARS" no encontrada
+Table "CARS" not found; SQL statement:
+alter table reservation add constraint FK7llqmft92ewwdejr2gv1nyf5j foreign key (id_car) references cars [42102-214]
+2023-05-03 18:23:35 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "create table car (id_car integer generated by default as identity, brand varchar(45), description varchar(250), name varchar(45), [*]year tinyint, id_gama integer not null, primary key (id_car))"; se esperaba "identifier"
+Syntax error in SQL statement "create table car (id_car integer generated by default as identity, brand varchar(45), description varchar(250), name varchar(45), [*]year tinyint, id_gama integer not null, primary key (id_car))"; expected "identifier"; SQL statement:
+create table car (id_car integer generated by default as identity, brand varchar(45), description varchar(250), name varchar(45), year tinyint, id_gama integer not null, primary key (id_car)) [42001-214]
+2023-05-03 18:23:35 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Tabla "CAR" no encontrada
+Table "CAR" not found; SQL statement:
+alter table car add constraint FK7jf72pj0hihv9rs5fhxnmqvxn foreign key (id_gama) references gamas [42102-214]
+2023-05-03 18:23:35 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Tabla "CAR" no encontrada
+Table "CAR" not found; SQL statement:
+alter table messages add constraint FKe63efbqsj7ir93v2n4cr9h6ku foreign key (id_car) references car [42102-214]
+2023-05-03 18:23:35 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Tabla "CAR" no encontrada
+Table "CAR" not found; SQL statement:
+alter table reservation add constraint FKevbx68glv1rnq9th5petwly67 foreign key (id_car) references car [42102-214]
+2023-05-03 18:26:35 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "create table car (id_car integer generated by default as identity, brand varchar(45), description varchar(250), name varchar(45), [*]year tinyint, id_gama integer not null, primary key (id_car))"; se esperaba "identifier"
+Syntax error in SQL statement "create table car (id_car integer generated by default as identity, brand varchar(45), description varchar(250), name varchar(45), [*]year tinyint, id_gama integer not null, primary key (id_car))"; expected "identifier"; SQL statement:
+create table car (id_car integer generated by default as identity, brand varchar(45), description varchar(250), name varchar(45), year tinyint, id_gama integer not null, primary key (id_car)) [42001-214]
+2023-05-03 18:26:35 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Tabla "CAR" no encontrada
+Table "CAR" not found; SQL statement:
+alter table car add constraint FK7jf72pj0hihv9rs5fhxnmqvxn foreign key (id_gama) references gamas [42102-214]
+2023-05-03 18:26:35 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Tabla "CAR" no encontrada
+Table "CAR" not found; SQL statement:
+alter table messages add constraint FKe63efbqsj7ir93v2n4cr9h6ku foreign key (id_car) references car [42102-214]
+2023-05-03 18:26:35 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Tabla "CAR" no encontrada
+Table "CAR" not found; SQL statement:
+alter table reservation add constraint FKevbx68glv1rnq9th5petwly67 foreign key (id_car) references car [42102-214]
+2023-05-03 18:28:23 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "create table car (id_car integer generated by default as identity, brand varchar(45), description varchar(250), name varchar(45), [*]year integer, id_gama integer not null, primary key (id_car))"; se esperaba "identifier"
+Syntax error in SQL statement "create table car (id_car integer generated by default as identity, brand varchar(45), description varchar(250), name varchar(45), [*]year integer, id_gama integer not null, primary key (id_car))"; expected "identifier"; SQL statement:
+create table car (id_car integer generated by default as identity, brand varchar(45), description varchar(250), name varchar(45), year integer, id_gama integer not null, primary key (id_car)) [42001-214]
+2023-05-03 18:28:23 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Tabla "CAR" no encontrada
+Table "CAR" not found; SQL statement:
+alter table car add constraint FK7jf72pj0hihv9rs5fhxnmqvxn foreign key (id_gama) references gamas [42102-214]
+2023-05-03 18:28:23 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Tabla "CAR" no encontrada
+Table "CAR" not found; SQL statement:
+alter table messages add constraint FKe63efbqsj7ir93v2n4cr9h6ku foreign key (id_car) references car [42102-214]
+2023-05-03 18:28:23 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Tabla "CAR" no encontrada
+Table "CAR" not found; SQL statement:
+alter table reservation add constraint FKevbx68glv1rnq9th5petwly67 foreign key (id_car) references car [42102-214]
+2023-05-03 18:29:26 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "create table car (id_car integer generated by default as identity, brand varchar(45), description varchar(250), name varchar(45), [*]year integer, id_gama integer not null, primary key (id_car))"; se esperaba "identifier"
+Syntax error in SQL statement "create table car (id_car integer generated by default as identity, brand varchar(45), description varchar(250), name varchar(45), [*]year integer, id_gama integer not null, primary key (id_car))"; expected "identifier"; SQL statement:
+create table car (id_car integer generated by default as identity, brand varchar(45), description varchar(250), name varchar(45), year integer, id_gama integer not null, primary key (id_car)) [42001-214]
+2023-05-03 18:29:26 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Tabla "CAR" no encontrada
+Table "CAR" not found; SQL statement:
+alter table car add constraint FK7jf72pj0hihv9rs5fhxnmqvxn foreign key (id_gama) references gamas [42102-214]
+2023-05-03 18:29:26 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Tabla "CAR" no encontrada
+Table "CAR" not found; SQL statement:
+alter table messages add constraint FKe63efbqsj7ir93v2n4cr9h6ku foreign key (id_car) references car [42102-214]
+2023-05-03 18:29:26 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Tabla "CAR" no encontrada
+Table "CAR" not found; SQL statement:
+alter table reservation add constraint FKevbx68glv1rnq9th5petwly67 foreign key (id_car) references car [42102-214]
+2023-05-03 18:30:18 database: wrong user or password; user: "SA"
+org.h2.message.DbException: Nombre de usuario ó password incorrecto
+Wrong user name or password [28000-214]
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.message.DbException.get(DbException.java:188)
+	at org.h2.engine.Engine.openSession(Engine.java:154)
+	at org.h2.engine.Engine.openSession(Engine.java:222)
+	at org.h2.engine.Engine.createSession(Engine.java:201)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:338)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:122)
+	at org.h2.util.JdbcUtils.getConnection(JdbcUtils.java:288)
+	at org.h2.server.web.WebServer.getConnection(WebServer.java:808)
+	at org.h2.server.web.WebApp.login(WebApp.java:1033)
+	at org.h2.server.web.WebApp.process(WebApp.java:226)
+	at org.h2.server.web.WebApp.processRequest(WebApp.java:176)
+	at org.h2.server.web.WebServlet.doGet(WebServlet.java:129)
+	at org.h2.server.web.WebServlet.doPost(WebServlet.java:166)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:555)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:209)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:389)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:926)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1791)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+Caused by: org.h2.jdbc.JdbcSQLInvalidAuthorizationSpecException: Nombre de usuario ó password incorrecto
+Wrong user name or password [28000-214]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:510)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477)
+	... 50 more
+2023-05-03 18:30:27 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "create table car (id_car integer generated by default as identity, brand varchar(45), description varchar(250), name varchar(45), [*]year integer, id_gama integer not null, primary key (id_car))"; se esperaba "identifier"
+Syntax error in SQL statement "create table car (id_car integer generated by default as identity, brand varchar(45), description varchar(250), name varchar(45), [*]year integer, id_gama integer not null, primary key (id_car))"; expected "identifier"; SQL statement:
+create table car (id_car integer generated by default as identity, brand varchar(45), description varchar(250), name varchar(45), year integer, id_gama integer not null, primary key (id_car)) [42001-214]

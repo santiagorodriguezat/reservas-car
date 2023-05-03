@@ -15,6 +15,7 @@ import java.util.Date;
 public class ReservationModel {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id_reservation")
     private int id;
     @Column(name = "start_date")
     private Date startDate;
