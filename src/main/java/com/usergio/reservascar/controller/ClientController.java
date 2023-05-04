@@ -17,5 +17,8 @@ public class ClientController {
     public List<ClientModel> obtener(){ return clientService.obtener(); }
 
     @PostMapping("/save")
-    public  void crear(@RequestBody ClientModel client){clientService.crear(client);}
+    public  List<ClientModel> crear(@RequestBody ClientModel client){
+        clientService.crear(client);
+        return obtener(); // Llamado al método GET
+    }
 }

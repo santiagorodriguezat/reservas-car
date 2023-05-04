@@ -15,5 +15,8 @@ public class MessageController {
     @GetMapping("/all")
     public List<MessageModel> obtener(){ return messageService.obtener();}
     @PostMapping("/save")
-    public void crear(@RequestBody MessageModel message){ messageService.crear(message); }
+    public List<MessageModel> crear(@RequestBody MessageModel message){
+        messageService.crear(message);
+        return obtener();
+    }
 }

@@ -16,5 +16,8 @@ public class ReservationController {
     @GetMapping("/all")
     public List<ReservationModel> obtenerReservas(){return reservationService.obtenerReservas(); }
     @PostMapping("/save")
-    public void crearReserva(@RequestBody ReservationModel reservation) {reservationService.crear(reservation);}
+    public List<ReservationModel> crearReserva(@RequestBody ReservationModel reservation) {
+        reservationService.crear(reservation);
+        return obtenerReservas();
+    }
 }
