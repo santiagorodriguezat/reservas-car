@@ -1,5 +1,6 @@
 package com.usergio.reservascar.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -17,7 +18,7 @@ public class CarModel{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id_car")
-    private int id;
+    private int idCar;
     @Column(length = 45)
     private String name;
     @Column(length = 45)
@@ -27,15 +28,17 @@ public class CarModel{
     @Column(length = 250)
     private String description;
 
-    @ManyToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "id_gama", nullable = false)
+    @ManyToOne(cascade = CascadeType.MERGE)
+    @JoinColumn(name = "idGama", nullable = false)
+    @JsonIgnoreProperties({"cars"})
     private GamaModel gama;
 
-    @OneToMany(cascade = CascadeType.MERGE)
-    @JoinColumn(name = "id_car", nullable = false)
+    @OneToMany(cascade = CascadeType.PERSIST, mappedBy = "car")
+    @JsonIgnoreProperties({"client","car"})
     private List<MessageModel> messages;
 
-    @OneToMany(cascade = CascadeType.MERGE)
-    @JoinColumn(name = "id_car", nullable = false)
+    @OneToMany(cascade = CascadeType.PERSIST, mappedBy = "car")
+    @JsonIgnoreProperties({"client","car"})
+
     private List<ReservationModel> reservations;
 }

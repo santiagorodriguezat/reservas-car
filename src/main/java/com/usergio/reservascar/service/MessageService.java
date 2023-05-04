@@ -15,7 +15,7 @@ public class MessageService {
     public List<MessageModel> obtener(){return messageRepository.findAll(); }
 
     public void crear(MessageModel message){
-        if(!messageRepository.existsById(message.getId())){
+        if(!messageRepository.existsById(message.getIdMessage())){
             messageRepository.save(message);
         }
     }

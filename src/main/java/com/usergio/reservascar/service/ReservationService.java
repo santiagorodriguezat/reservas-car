@@ -15,7 +15,7 @@ public class ReservationService {
     public List<ReservationModel> obtenerReservas(){ return  reservationRepository.findAll(); }
 
     public void crear(ReservationModel reservation){
-        if(!reservationRepository.existsById(reservation.getId())){
+        if(!reservationRepository.existsById(reservation.getIdReservation())){
             reservationRepository.save(reservation);
         }
     }

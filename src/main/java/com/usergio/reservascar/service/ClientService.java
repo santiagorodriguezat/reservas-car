@@ -15,7 +15,7 @@ public class ClientService {
     public List<ClientModel> obtener(){ return clientRepository.findAll(); }
 
     public void crear(ClientModel model){
-        if(!clientRepository.existsById(model.getId())){
+        if(!clientRepository.existsById(model.getIdClient())){
             clientRepository.save(model);
         }
     }

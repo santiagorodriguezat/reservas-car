@@ -15,7 +15,7 @@ public class GamaService {
     public List<GamaModel> obtener(){return gamaRepository.findAll(); }
 
     public void crear(GamaModel gama){
-        if(!gamaRepository.existsById(gama.getId())){
+        if(!gamaRepository.existsById(gama.getIdGama())){
             gamaRepository.save(gama);
         }
     }

@@ -1,5 +1,6 @@
 package com.usergio.reservascar.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -15,22 +16,24 @@ import java.util.List;
 public class ClientModel {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
-    @Column(length = 250)
-    private String name;
+    @Column(name = "id")
+    private int idClient;
     @Column(length = 45)
     private String email;
     @Column(length = 45)
     private String password;
+    @Column(length = 250)
+    private String name;
     @Column(length = 3)
     private byte age;
 
-    @OneToMany(cascade = CascadeType.MERGE)
-    @JoinColumn(name = "id_client", nullable = false)
+    @OneToMany(cascade = CascadeType.PERSIST, mappedBy = "client")
+    //@JoinColumn(name = "id_client", nullable = false)
     private List<MessageModel> messages;
 
-    @OneToMany(cascade = CascadeType.MERGE)
-    @JoinColumn(name = "id_client", nullable = false)
+    @OneToMany(cascade = CascadeType.PERSIST, mappedBy = "client")
+    //@JoinColumn(name = "id_client", nullable = false)
+    @JsonIgnoreProperties({"client"})
     private List<ReservationModel> reservations;
 
 }
