@@ -16,8 +16,12 @@ public class CarController {
     public List<CarModel> obtener(){ return carService.obtener(); }
 
     @PostMapping("/save")
-    public List<CarModel> crear(@RequestBody CarModel car) {
+    public void crear(@RequestBody CarModel car) {
         carService.crear(car);
-        return obtener(); // Llamado al método GET
+    }
+    @PostMapping("/all")
+    public  List<CarModel> saveAll(@RequestBody CarModel car){
+        crear(car);
+        return obtener();
     }
 }

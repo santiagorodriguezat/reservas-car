@@ -1,6 +1,7 @@
 package com.usergio.reservascar.controller;
 
 import com.usergio.reservascar.model.ClientModel;
+import com.usergio.reservascar.model.GamaModel;
 import com.usergio.reservascar.service.ClientService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -20,5 +21,11 @@ public class ClientController {
     public  List<ClientModel> crear(@RequestBody ClientModel client){
         clientService.crear(client);
         return obtener(); // Llamado al método GET
+    }
+
+    @PostMapping("/all")
+    public  List<ClientModel> saveAll(@RequestBody ClientModel client){
+        crear(client);
+        return obtener();
     }
 }

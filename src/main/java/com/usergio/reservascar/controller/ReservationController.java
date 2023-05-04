@@ -1,5 +1,6 @@
 package com.usergio.reservascar.controller;
 
+import com.usergio.reservascar.model.MessageModel;
 import com.usergio.reservascar.model.ReservationModel;
 import com.usergio.reservascar.service.ReservationService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,6 +19,11 @@ public class ReservationController {
     @PostMapping("/save")
     public List<ReservationModel> crearReserva(@RequestBody ReservationModel reservation) {
         reservationService.crear(reservation);
+        return obtenerReservas();
+    }
+    @PostMapping("/all")
+    public   List<ReservationModel> saveAll(@RequestBody ReservationModel reservation){
+        crearReserva(reservation);
         return obtenerReservas();
     }
 }
