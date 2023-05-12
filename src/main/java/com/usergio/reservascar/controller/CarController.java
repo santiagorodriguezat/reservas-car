@@ -1,8 +1,10 @@
 package com.usergio.reservascar.controller;
 
+import com.usergio.reservascar.dbo.CarDbo;
 import com.usergio.reservascar.model.CarModel;
 import com.usergio.reservascar.service.CarService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -19,9 +21,16 @@ public class CarController {
     public void crear(@RequestBody CarModel car) {
         carService.crear(car);
     }
-    @PostMapping("/all")
+
+    @PutMapping("/update")
+    @ResponseStatus(HttpStatus.CREATED)
+    public void actualizar(@RequestBody CarDbo carDbo){
+        carService.actualizar(carDbo);
+    }
+
+    /*@PostMapping("/all")
     public  List<CarModel> saveAll(@RequestBody CarModel car){
         crear(car);
         return obtener();
-    }
+    }*/
 }

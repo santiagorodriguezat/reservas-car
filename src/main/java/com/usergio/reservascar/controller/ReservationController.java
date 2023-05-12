@@ -1,9 +1,11 @@
 package com.usergio.reservascar.controller;
 
+import com.usergio.reservascar.dbo.ReservationDbo;
 import com.usergio.reservascar.model.MessageModel;
 import com.usergio.reservascar.model.ReservationModel;
 import com.usergio.reservascar.service.ReservationService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -21,9 +23,15 @@ public class ReservationController {
         reservationService.crear(reservation);
         return obtenerReservas();
     }
-    @PostMapping("/all")
+    @PutMapping("/update")
+    @ResponseStatus(HttpStatus.CREATED)
+    public void actualizar(@RequestBody ReservationDbo reservationDbo){
+        reservationService.actualizar(reservationDbo);
+    }
+
+    /*@PostMapping("/all")
     public   List<ReservationModel> saveAll(@RequestBody ReservationModel reservation){
         crearReserva(reservation);
         return obtenerReservas();
-    }
+    }*/
 }

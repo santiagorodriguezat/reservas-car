@@ -1,5 +1,6 @@
 package com.usergio.reservascar.service;
 
+import com.usergio.reservascar.dbo.MessageDbo;
 import com.usergio.reservascar.model.MessageModel;
 import com.usergio.reservascar.repository.MessageRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,6 +17,13 @@ public class MessageService {
 
     public void crear(MessageModel message){
         if(!messageRepository.existsById(message.getIdMessage())){
+            messageRepository.save(message);
+        }
+    }
+    public void actualizar(MessageDbo messageDbo) {
+        if(messageRepository.existsById(messageDbo.getIdMessage())){
+            MessageModel message = messageRepository.findById(messageDbo.getIdMessage()).get();
+            message.setMessageText(messageDbo.getMessageText());
             messageRepository.save(message);
         }
     }
