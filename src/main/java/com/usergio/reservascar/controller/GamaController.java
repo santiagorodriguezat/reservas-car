@@ -17,10 +17,7 @@ public class GamaController {
     GamaService gamaService;
 
     @GetMapping("/all")
-    public List<GamaModel> obtenerGamas(){
-        return gamaService.obtener();
-
-    }
+    public List<GamaModel> obtenerGamas(){return gamaService.obtener(); }
 
     @PostMapping("/save")
     public List<GamaModel> crearGamas(@RequestBody GamaModel gama){
