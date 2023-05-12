@@ -34,6 +34,13 @@ public class GamaController {
         gamaService.actualizar(gamaDbo);
     }
 
+    @DeleteMapping("/{id}")
+    @ResponseStatus(HttpStatus.NO_CONTENT)
+    public void eliminar(@PathVariable int id){
+        gamaService.eliminar(id);
+    }
+
+
    /* @PostMapping("/all")
     public  List<GamaModel> saveAll(@RequestBody GamaModel gama){
         crearGamas(gama);

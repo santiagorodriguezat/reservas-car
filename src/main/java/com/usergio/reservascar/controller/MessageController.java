@@ -29,6 +29,12 @@ public class MessageController {
         messageService.actualizar(messageDbo);
     }
 
+    @DeleteMapping("/{id}")
+    @ResponseStatus(HttpStatus.NO_CONTENT)
+    public void eliminar(@PathVariable int id){
+        messageService.eliminar(id);
+    }
+
     /*@PostMapping("/all")
     public  List<MessageModel> saveAll(@RequestBody MessageModel message){
         crear(message);

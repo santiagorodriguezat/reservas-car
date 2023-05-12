@@ -30,4 +30,8 @@ public class ClientService {
             clientRepository.save(client);
         }
     }
+
+    public void eliminar(int id){
+        clientRepository.deleteById(id);
+    }
 }

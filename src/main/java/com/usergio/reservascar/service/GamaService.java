@@ -28,4 +28,8 @@ public class GamaService {
             gamaRepository.save(gama);
         }
     }
+
+    public void eliminar(int id){
+        gamaRepository.deleteById(id);
+    }
 }

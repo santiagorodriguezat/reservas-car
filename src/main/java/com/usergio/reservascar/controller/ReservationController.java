@@ -29,6 +29,12 @@ public class ReservationController {
         reservationService.actualizar(reservationDbo);
     }
 
+    @DeleteMapping("/{id}")
+    @ResponseStatus(HttpStatus.NO_CONTENT)
+    public void eliminar(@PathVariable int id){
+        reservationService.eliminar(id);
+    }
+
     /*@PostMapping("/all")
     public   List<ReservationModel> saveAll(@RequestBody ReservationModel reservation){
         crearReserva(reservation);

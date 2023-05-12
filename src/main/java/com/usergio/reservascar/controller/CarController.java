@@ -18,7 +18,8 @@ public class CarController {
     public List<CarModel> obtener(){ return carService.obtener(); }
 
     @PostMapping("/save")
-    public void crear(@RequestBody CarModel car) {
+    @ResponseStatus(HttpStatus.CREATED)
+    public void crear(@RequestBody CarModel car){
         carService.crear(car);
     }
 
@@ -28,9 +29,10 @@ public class CarController {
         carService.actualizar(carDbo);
     }
 
-    /*@PostMapping("/all")
-    public  List<CarModel> saveAll(@RequestBody CarModel car){
-        crear(car);
-        return obtener();
-    }*/
+    @DeleteMapping("/{id}")
+    @ResponseStatus(HttpStatus.NO_CONTENT)
+    public void eliminar(@PathVariable int id){
+        carService.eliminar(id);
+    }
+
 }

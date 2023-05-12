@@ -33,4 +33,8 @@ public class CarService {
         }
     }
 
+    public void eliminar(int id){
+        carRepository.deleteById(id);
+    }
+
 }

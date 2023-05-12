@@ -28,8 +28,8 @@ public class CarModel{
     @Column(length = 250)
     private String description;
 
-    @ManyToOne(cascade = CascadeType.MERGE)
-    @JoinColumn(name = "idGama", nullable = false)
+    @ManyToOne
+    @JoinColumn(name = "id_gama")
     @JsonIgnoreProperties({"cars"})
     private GamaModel gama;
 
@@ -38,7 +38,5 @@ public class CarModel{
     private List<MessageModel> messages;
 
     @OneToMany(cascade = CascadeType.PERSIST, mappedBy = "car")
-    @JsonIgnoreProperties({"client","car"})
-
     private List<ReservationModel> reservations;
 }

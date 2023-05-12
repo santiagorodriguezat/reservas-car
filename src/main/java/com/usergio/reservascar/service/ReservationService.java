@@ -30,4 +30,8 @@ public class ReservationService {
             reservationRepository.save(message);
         }
     }
+
+    public void eliminar(int id){
+        reservationRepository.deleteById(id);
+    }
 }
