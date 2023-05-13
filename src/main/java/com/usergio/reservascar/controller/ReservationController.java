@@ -1,5 +1,6 @@
 package com.usergio.reservascar.controller;
 
+import com.usergio.reservascar.dbo.ReportDbo;
 import com.usergio.reservascar.dbo.ReservationDbo;
 import com.usergio.reservascar.model.MessageModel;
 import com.usergio.reservascar.model.ReservationModel;
@@ -8,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
+import java.text.ParseException;
 import java.util.List;
 
 @RestController
@@ -35,9 +37,14 @@ public class ReservationController {
         reservationService.eliminar(id);
     }
 
-    /*@PostMapping("/all")
-    public   List<ReservationModel> saveAll(@RequestBody ReservationModel reservation){
-        crearReserva(reservation);
-        return obtenerReservas();
-    }*/
+    @GetMapping("/report-dates/{fechainicio}/{fechafin}")
+    public List<ReservationModel> reportDate(@PathVariable String fechainicio, @PathVariable String fechafin) throws ParseException {
+        return reservationService.reportDate(fechainicio,fechafin);
+    }
+
+    @GetMapping("/report-status")
+    public ReportDbo reportStatus() {
+        return reservationService.reportStatus();
+    }
+
 }
