@@ -55,4 +55,11 @@ public class ReservationService {
         ReportDbo rta = new ReportDbo(cantidadCompletados,cantidadCancelados);
         return rta;
     }
+
+    public ReportDbo reportClients(){
+        Integer cantCompletados =  reservationRepository.countByStatus("completed");
+        Integer cantCancelados =  reservationRepository.countByStatus("cancelled");
+        ReportDbo rta = new ReportDbo(cantCompletados,cantCancelados);
+        return rta;
+    }
 }

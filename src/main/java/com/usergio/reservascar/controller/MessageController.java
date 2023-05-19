@@ -18,11 +18,10 @@ public class MessageController {
     @GetMapping("/all")
     public List<MessageModel> obtener(){ return messageService.obtener();}
     @PostMapping("/save")
-    public List<MessageModel> crear(@RequestBody MessageModel message){
+    @ResponseStatus(HttpStatus.CREATED)
+    public void crear(@RequestBody MessageModel message) {
         messageService.crear(message);
-        return obtener();
     }
-
     @PutMapping("/update")
     @ResponseStatus(HttpStatus.CREATED)
     public void actualizar(@RequestBody MessageDbo messageDbo){

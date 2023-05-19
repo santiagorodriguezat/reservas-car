@@ -14,16 +14,16 @@ import java.util.List;
 @AllArgsConstructor
 @NoArgsConstructor
 
-public class CarModel{
+public class CarModel {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id_car")
+    @Column(name = "id")
     private int idCar;
     @Column(length = 45)
     private String name;
     @Column(length = 45)
     private String brand;
-    @Column(length = 5, name = "modelo")
+    @Column(name = "yyear")
     private int year;
     @Column(length = 250)
     private String description;

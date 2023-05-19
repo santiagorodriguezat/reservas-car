@@ -17,6 +17,7 @@ public class CarController {
     @GetMapping("/all")
     public List<CarModel> obtener(){ return carService.obtener(); }
 
+
     @PostMapping("/save")
     @ResponseStatus(HttpStatus.CREATED)
     public void crear(@RequestBody CarModel car){

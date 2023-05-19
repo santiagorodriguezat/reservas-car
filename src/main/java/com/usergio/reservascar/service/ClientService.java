@@ -1,11 +1,13 @@
 package com.usergio.reservascar.service;
 
 import com.usergio.reservascar.dbo.ClientDbo;
+import com.usergio.reservascar.dbo.ReportClientDbo;
 import com.usergio.reservascar.model.ClientModel;
 import com.usergio.reservascar.repository.ClientRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.LinkedList;
 import java.util.List;
 
 @Service
@@ -33,5 +35,15 @@ public class ClientService {
 
     public void eliminar(int id){
         clientRepository.deleteById(id);
+    }
+
+    public List<ReportClientDbo> reportClients() {
+        List<ReportClientDbo> listReportClient = new LinkedList<>();
+        List<ClientModel> listClient = clientRepository.findClientByStatusCompleted();
+        for (ClientModel client : listClient) {
+            int totalReservation = client.getReservations().size();
+            listReportClient.add(new ReportClientDbo(totalReservation,client));
+        }
+        return listReportClient;
     }
 }

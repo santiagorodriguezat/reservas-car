@@ -28,11 +28,8 @@ public class ClientModel {
     private byte age;
 
     @OneToMany(cascade = CascadeType.PERSIST, mappedBy = "client")
-    //@JoinColumn(name = "id_client", nullable = false)
     private List<MessageModel> messages;
-
     @OneToMany(cascade = CascadeType.PERSIST, mappedBy = "client")
-    //@JoinColumn(name = "id_client", nullable = false)
     @JsonIgnoreProperties({"client"})
     private List<ReservationModel> reservations;
 

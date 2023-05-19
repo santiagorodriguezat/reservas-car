@@ -1,5 +1,6 @@
 package com.usergio.reservascar.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -15,7 +16,7 @@ import java.util.List;
 public class GamaModel {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id_gama")
+    @Column(name = "id")
     private int idGama;
     @Column(length = 45)
     private String name;
@@ -24,6 +25,5 @@ public class GamaModel {
 
     @OneToMany(cascade = CascadeType.PERSIST, mappedBy = "gama")
     private List<CarModel> cars;
-
 
 }
