@@ -24,7 +24,7 @@ public class GamaModel {
     private String description;
 
     @OneToMany(cascade = CascadeType.PERSIST, mappedBy = "gama")
-    @JsonIgnoreProperties("gama")
+
     private List<CarModel> cars;
 
 }

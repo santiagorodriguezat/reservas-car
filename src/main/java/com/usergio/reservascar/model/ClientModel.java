@@ -28,6 +28,7 @@ public class ClientModel {
     private byte age;
 
     @OneToMany(cascade = CascadeType.PERSIST, mappedBy = "client")
+    @JsonIgnoreProperties({"gama"})
     private List<MessageModel> messages;
     @OneToMany(cascade = CascadeType.PERSIST, mappedBy = "client")
     @JsonIgnoreProperties({"client"})

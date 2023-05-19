@@ -22,6 +22,7 @@ public class MessageController {
     public void crear(@RequestBody MessageModel message) {
         messageService.crear(message);
     }
+
     @PutMapping("/update")
     @ResponseStatus(HttpStatus.CREATED)
     public void actualizar(@RequestBody MessageDbo messageDbo){

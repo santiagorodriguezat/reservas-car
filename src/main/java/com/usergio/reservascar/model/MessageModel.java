@@ -28,11 +28,6 @@ public class MessageModel implements Serializable {
     private CarModel car;
 
     @ManyToOne
-    @JoinColumn(name = "id_gama", nullable = true)
-    @JsonIgnoreProperties({"messages","reservations"})
-    private GamaModel gama;
-
-    @ManyToOne
     @JoinColumn(name = "id_client")
     @JsonIgnoreProperties({"messages","reservations"})
     private ClientModel client;
