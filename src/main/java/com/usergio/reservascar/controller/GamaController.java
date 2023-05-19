@@ -20,6 +20,7 @@ public class GamaController {
     public List<GamaModel> obtenerGamas(){return gamaService.obtener(); }
 
     @PostMapping("/save")
+    @ResponseStatus(HttpStatus.CREATED)
     public List<GamaModel> crearGamas(@RequestBody GamaModel gama){
         gamaService.crear(gama);
         return obtenerGamas(); // Llamado al método GET
